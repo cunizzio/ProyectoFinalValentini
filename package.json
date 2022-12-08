@@ -1,0 +1,31 @@
+{
+  "name": "apple-service-vb",
+  "version": "1.0.0",
+  "description": "Proyecto Java Script",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "node-sass --include-path scss Styles/SCSS/styles.scss Styles/CSS/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cunizzio/PreEntrega2Valentini.git"
+  },
+  "keywords": [
+    "iPhone",
+    "Apple",
+    "celular",
+    "servicio",
+    "técnico"
+  ],
+  "author": "Alejo Valentini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cunizzio/PreEntrega2Valentini/issues"
+  },
+  "homepage": "https://github.com/cunizzio/PreEntrega2Valentini#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

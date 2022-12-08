@@ -1,0 +1,6 @@
+[
+    { "id": 2, "nombre": "iPhone 11 128 GB", "precio": 765, "img": "./Imagenes/iPhone11GB128.png" },
+    { "id": 1, "nombre": "iphone SE 64 GB", "precio": 560,"img": "./Imagenes/iPhoneSE64GB.png" },
+    { "id": 3, "nombre": "iPhone 12 256 GB", "precio": 1030, "img": "./Imagenes/iphone12GB256.png" },
+    { "id": 4, "nombre": "iPhone 13 PRO MAX 256 GB", "precio": 1450, "img": "./Imagenes/iphone13pro256gb.png" }
+]
