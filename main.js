@@ -7,7 +7,7 @@ const vaciarCarrito = document.querySelector("#vaciarCarrito")
 
 fetch("./productos.json")
     .then((response) => response.json())
-    .then((data) => {d
+    .then((data) => {
         data.forEach((producto) => {
 
             let div_prod = document.createElement("div")
@@ -54,22 +54,20 @@ fetch("./productos.json")
 
 let agregarAlCarrito = (id) => {
 
-    let producto = fetch("./productos.json")
+    fetch("./productos.json")
         .then((response) => response.json())
         .then((data) => {
 
-            data.find((x) => x.id == id);
+            const producto = data.find((x) => x.id == id);
+
+            carrito.push(producto)
+
+            enviarAlCarrito()
+
+            totalProductos()
+
+            localStorage.setItem("productosElegidos", JSON.stringify(carrito));
         })
-
-    // let producto = productos.find((x) => x.id == id);
-
-    carrito.push(producto)
-
-    enviarAlCarrito()
-
-    totalProductos()
-
-    localStorage.setItem("productosElegidos", JSON.stringify(carrito));
 }
 
 const enviarAlCarrito = () => {
@@ -100,7 +98,9 @@ let totalProductos = () => {
     precioTotal.innerText = costo_total
 }
 
-
-
-
-
+vaciarCarrito.addEventListener('click', () => {
+    carrito.length = 0
+    enviarAlCarrito ()
+    totalProductos ()
+    localStorage.setItem("productosElegidos", JSON.stringify(carrito))
+})
